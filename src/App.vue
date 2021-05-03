@@ -2,15 +2,9 @@
   <div class="">
     <form
       class="mx-auto w-90"
-      @submit.prevent="submit"
+      @submit.prevent="submitForm"
       style="max-width: 600px"
     >
-      <!-- <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" v-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div> -->
-
       <base-input
         type="email"
         required
@@ -89,11 +83,8 @@ export default {
   },
 
   methods: {
-    submit() {
+    submitForm() {
       console.log(this.email, this.password, this.checked);
-
-      const name = "john";
-      console.log(name);
 
       const btn = this.$refs.myBtn;
       btn.addDisabledState();
