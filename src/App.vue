@@ -2,7 +2,7 @@
   <div class="">
     <form
       class="mx-auto w-90"
-      @submit.prevent="submit"
+      @submit.prevent="submitForm"
       style="max-width: 600px"
     >
       <base-input
@@ -83,7 +83,7 @@ export default {
   },
 
   methods: {
-    submit() {
+    submitForm() {
       console.log(this.email, this.password, this.checked);
 
       const btn = this.$refs.myBtn;
