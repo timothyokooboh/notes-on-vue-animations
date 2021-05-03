@@ -86,9 +86,6 @@ export default {
     submit() {
       console.log(this.email, this.password, this.checked);
 
-      const name = "john";
-      console.log(name);
-
       const btn = this.$refs.myBtn;
       btn.addDisabledState();
 
